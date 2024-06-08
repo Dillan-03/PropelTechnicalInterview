@@ -1,8 +1,8 @@
 # PropelTechnicalInterview
 ### System Progression
 #### 1 - Initial Build
-Using Python.
-Making sure the user can first list, amend and search all records
+Using Python. 
+Need to be able to list, view, add, edit and delete records
 #### 2 - Integrating the API
 ### Rough Notes
 
