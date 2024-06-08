@@ -1,5 +1,9 @@
 # PropelTechnicalInterview
-
+### System Progression
+#### 1 - Initial Build
+Using Python.
+Making sure the user can first list, amend and search all records
+#### 2 - Integrating the API
 ### Rough Notes
 
 API is a way for two different systems to communicate with each other. It is a set of rules that allows one piece of software application to talk to another.
@@ -15,7 +19,7 @@ Most APIs use standard HTTP methods to make requests and responses
 1. Create a virtual environment
 2. pip install -requirements.txt
 
-## Folder Structure
+### Folder Structure
 
 ```
 PropelTechnicalInterview
