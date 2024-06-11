@@ -19,10 +19,11 @@ Most APIs use standard HTTP methods to make requests and responses
 **_PUT_** - Update data on a server
 **_DELETE_** - Remove data from a server
 
-### Virutal Environment
+### Virutal Environment and Running
 
 1. Create a virtual environment
-2. pip install -requirements.txt
+2. pip install -requirements.txt in this directory
+3. To run the application, run the command **python app.py**
 
 ### Folder Structure
 
@@ -32,16 +33,20 @@ PropelTechnicalInterview
 ├── requirements.txt
 ├── .gitignore
 ├── app/
-│   ├── __init__.py
+│   ├── init.py
 │   ├── api/
-│   │   ├── __init__.py
 │   │   ├── views.py
 │   ├── tests/
-│   │   ├── __init__.py
 │   │   └── test_app.py
 │   ├── config.py
-│   ├── address_book.json
 │   └── utils.py
 ├── migrations/
-└── run.py
+├── address_book.json
+├── .gitignore
+└── app.py
 ```
+
+## Testing
+
+For testing I used Postman Agent to test the API locally and see if it works as intended
+For the complexity of this task, I decided to manually test the response section in Postman to verify the correct return status is being returned.
