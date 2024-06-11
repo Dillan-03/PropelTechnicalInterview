@@ -1,9 +1,14 @@
 # PropelTechnicalInterview
+
 ### System Progression
+
 #### 1 - Initial Build
-Using Python. 
+
+Using Python.
 Need to be able to list, view, add, edit and delete records
+
 #### 2 - Integrating the API
+
 ### Rough Notes
 
 API is a way for two different systems to communicate with each other. It is a set of rules that allows one piece of software application to talk to another.
@@ -31,7 +36,6 @@ PropelTechnicalInterview
 │   ├── api/
 │   │   ├── __init__.py
 │   │   ├── views.py
-│   │   └── models.py
 │   ├── tests/
 │   │   ├── __init__.py
 │   │   └── test_app.py
