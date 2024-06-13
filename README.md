@@ -29,6 +29,9 @@ Most APIs use standard HTTP methods to make requests and responses
 PropelTechnicalInterview
 ├── README.md
 ├── requirements.txt
+├── static/
+│   └── styles.css
+│   └── table.css
 ├── templates/
 │   └── 404.html
 │   └── add.html
