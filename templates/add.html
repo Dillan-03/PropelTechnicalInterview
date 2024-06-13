@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Add Form </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  
+    <h1>Add User</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>{{ form.firstname.label }}<br>{{ form.firstname(size=32) }}</p>
+        <p>{{ form.lastname.label }}<br>{{ form.lastname(size=32) }}</p>
+        <p>{{ form.phone.label }}<br>{{ form.phone(size=32) }}</p>
+        <p>{{ form.email.label }}<br>{{ form.email(size=32) }}</p>
+        <p>{{ form.submit() }}</p>
+    </form>
+        {% for field, errors in form.errors.items() %}
+        <ul>
+            {% for error in errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+     {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+</body>
+</html>

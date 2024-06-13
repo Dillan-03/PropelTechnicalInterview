@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>User List</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='table.css') }}">
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="/add">Add Record</a></li>
+      <li><a href="/error">Edit Record</a></li>
+      <li><a href="/error">Delete Record</a></li>
+        <li><a href="/list">Lists Record</a></li>
+    <li><a href="/search">Search Records</a></li>
+
+
+    </ul>
+
+
+  </div>
+</nav>
+    <h1>Search Records</h1>
+    <form method="POST">
+        <input type="text" name="search" placeholder="Search" value="{{ search_query }}">
+        <button type="submit">Search</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+            <tr>
+                <td>{{ record.first_name }}</td>
+                <td>{{ record.last_name }}</td>
+                <td>{{ record.phone }}</td>
+                <td>{{ record.email }}</td>
+               
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</body>
+</html>

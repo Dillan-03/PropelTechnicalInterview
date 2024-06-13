@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Edit Form </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="/add">Add Record</a></li>
+      <li><a href="/error">Edit Record</a></li>
+      <li><a href="/error">Delete Record</a></li>
+        <li><a href="/list">Lists Record</a></li>
+    <li><a href="/search">Search Records</a></li>
+
+
+    </ul>
+
+
+  </div>
+</nav>
+    <h1>Delete Record</h1>
+    
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>{{ form.firstname.label }}<br>{{ form.firstname(size=32) }}</p>
+        <p>{{ form.lastname.label }}<br>{{ form.lastname(size=32) }}</p>
+        <p>{{ form.phone.label }}<br>{{ form.phone(size=32) }}</p>
+        <p>{{ form.email.label }}<br>{{ form.email(size=32) }}</p>
+        <p><button type="submit">Delete Record</button></p>
+    </form>
+
+  
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    {% for field, errors in form.errors.items() %}
+        <ul>
+            {% for error in errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+ 
+</body>
+</html>
