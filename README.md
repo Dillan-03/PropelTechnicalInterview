@@ -16,8 +16,6 @@ API is a way for two different systems to communicate with each other. It is a s
 Most APIs use standard HTTP methods to make requests and responses
 **_GET_** - Retrieve data from a server
 **_POST_** - Send data to a server
-**_PUT_** - Update data on a server
-**_DELETE_** - Remove data from a server
 
 ### Virutal Environment and Running
 
@@ -31,22 +29,23 @@ Most APIs use standard HTTP methods to make requests and responses
 PropelTechnicalInterview
 ├── README.md
 ├── requirements.txt
-├── .gitignore
-├── app/
-│   ├── init.py
-│   ├── api/
-│   │   ├── views.py
-│   ├── tests/
-│   │   └── test_app.py
-│   ├── config.py
-│   └── utils.py
-├── migrations/
+├── templates/
+│   └── 404.html
+│   └── add.html
+│   └── edit.html
+│   └── delete.html
+│   └── home.html
+│   └── list.html
+│   └── search.html
+├── tests/
+│   └── test_app.py
 ├── address_book.json
 ├── .gitignore
 └── app.py
+└── forms.py
+
 ```
 
 ## Testing
 
-For testing I used Postman Agent to test the API locally and see if it works as intended
-For the complexity of this task, I decided to manually test the response section in Postman to verify the correct return status is being returned.
+For testing I used unit testing to test the API through different test case scenarios. The tests are located in the tests folder and can be run by running the command **python -m unittest discover -s tests**
