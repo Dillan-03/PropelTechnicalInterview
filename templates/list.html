@@ -7,8 +7,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-0evSXbVzTVFT4GX6F7JY7EEKgucPFBzrYBsCmL3iKm8cofSSE//jywz9jIKjUe3Zb" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-OgwmRWzBJ8QqypiFvU+9fwP6a5TCgjTPLMQzE4OzqlZTUhvkgQf6z/XjgOtPV+le" crossorigin="anonymous"></script>
 
-      <link rel="stylesheet" href="{{ url_for('static', filename='table.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='table.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
 
 </head>
 <body>
@@ -21,7 +26,7 @@
       <li><a href="/add">Add Record</a></li>
       <li><a href="/error">Edit Record</a></li>
       <li><a href="/error">Delete Record</a></li>
-        <li><a href="/list">Lists Record</a></li>
+        <li class="active"><a href="/list">Lists Record</a></li>
     <li><a href="/search">Search Records</a></li>
 
 
