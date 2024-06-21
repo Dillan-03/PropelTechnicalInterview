@@ -20,7 +20,7 @@ Most APIs use standard HTTP methods to make requests and responses
 ### Virutal Environment and Running
 
 1. Create a virtual environment
-2. pip install -requirements.txt in this directory
+2. pip install -r requirements.txt in this directory
 3. To run the application, run the command **python app.py**
 
 ### Folder Structure
